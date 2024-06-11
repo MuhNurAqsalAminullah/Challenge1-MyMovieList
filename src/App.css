@@ -1,0 +1,671 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=K2D:wght@200;300;400;500;600;700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(
+    circle,
+    rgba(35, 35, 35, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  color: white;
+  height: 100%;
+  box-sizing: border-box;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 360px) {
+  /* ---------- Header ----------- */
+  .container-navbar {
+    /* background-color: rgb(26, 26, 26); */
+    background: radial-gradient(
+      circle,
+      rgba(35, 35, 35, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition-duration: 300ms;
+    /* border: 1px solid white; */
+  }
+
+  .container-navbar-scroll {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    transition-duration: 300ms;
+  }
+
+  .box-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 16px;
+  }
+
+  /* .box-nav-title {
+    border: 1px solid red;
+  } */
+
+  .nav-title {
+    font-size: 24px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+    font-family: "K2D", sans-serif;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+  }
+
+  .box-nav-item {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-items: center;
+    gap: 0 20px;
+  }
+
+  .nav-item {
+    font-size: 16px;
+    padding-top: 5px;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav-item-setting {
+    font-size: 28px;
+    padding: 0;
+  }
+
+  .box-setting {
+    background: radial-gradient(
+      circle,
+      rgba(35, 35, 35, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    z-index: 10;
+    transform: translateX(0);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-duration: 300ms;
+  }
+
+  .box-setting-hidden {
+    background: radial-gradient(
+      circle,
+      rgba(35, 35, 35, 1) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 10px;
+    position: fixed;
+    top: 72px;
+    right: 0;
+    z-index: 10;
+    transform: translateX(100%);
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-duration: 300ms;
+  }
+
+  .image-profile {
+    background-color: #888888;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .box-button-logout {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    margin-top: 35px;
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+
+  /* ---------- Banner Slider ----------- */
+  .box-main {
+    padding-top: 120px;
+  }
+
+  .poster-slider-title {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .box-content-slider {
+    /* border: 1px solid red; */
+    height: 250px;
+    margin: 30px 100px 50px 100px;
+  }
+
+  .box-content-main {
+    padding: 0 20px;
+  }
+
+  .title-content-main {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  /* ---------- Card Content List ----------- */
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    margin-top: 20px;
+  }
+
+  .box-card {
+    width: 160px;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 180px;
+    background-color: #464646;
+    overflow: hidden;
+  }
+
+  .image-content {
+    width: 100%;
+    background-size: cover;
+  }
+
+  .card-text {
+    padding: 10px 5px;
+  }
+
+  .card-text-date {
+    color: #888888;
+  }
+
+  /* ---------- Detail Content ----------- */
+  .box-detail {
+    position: relative;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .bg-content-detail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.5;
+  }
+
+  .box-image-detail {
+    background-color: #888888;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .content-image-detail {
+    width: 100%;
+    background-size: cover;
+  }
+
+  .box-content-detail {
+    margin: 25px 0;
+  }
+
+  .content-date-leng-detail {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .content-title-detail {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .box-content-genre-detail {
+    display: flex;
+    gap: 0 10px;
+  }
+
+  .content-genre-item-detail {
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .content-desc-detail {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1rem;
+  }
+
+  .contnt-rating-detail {
+    background-color: yellow;
+    color: black;
+    width: fit-content;
+    font-size: 14px;
+    padding: 3px 8px;
+    border-radius: 10px;
+  }
+
+  /* ------------ Login componets ------------ */
+  .container-login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .box-login {
+    /* border: 1px solid blue; */
+    width: 70%;
+    font-family: "K2D", sans-serif;
+    text-transform: capitalize;
+  }
+
+  .title-login {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .text-login {
+    margin-bottom: 10px;
+  }
+
+  .input-login {
+    outline: none;
+    padding: 10px 5px;
+    width: 95%;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .box-btn-login {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-login {
+    background-color: yellow;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* ---------- Header ----------- */
+  .box-detail {
+    padding-top: 125px;
+  }
+  .box-content {
+    padding: 20px 50px;
+  }
+
+  .nav-title {
+    font-size: 26px;
+  }
+
+  .box-nav-item {
+    gap: 0 30px;
+  }
+
+  .nav-item {
+    font-size: 20px;
+  }
+
+  .nav-item-setting {
+    font-size: 30px;
+  }
+
+  .box-setting {
+    width: 30%;
+    padding: 20px 0;
+  }
+
+  /* ---------- Banner Slider ----------- */
+  .poster-slider-title {
+    font-size: 20px;
+  }
+
+  .title-content-main {
+    font-size: 20px;
+  }
+
+  /* ---------- Card Content List ----------- */
+  .card-container {
+    gap: 20px 20px;
+  }
+
+  .box-card {
+    width: 150px;
+  }
+
+  .card-image {
+    height: 200px;
+  }
+
+  /* ---------- Detail Content ----------- */
+  .box-detail {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .box-image-detail {
+    width: 40%;
+    height: 350px;
+  }
+
+  .box-content-detail {
+    width: 100%;
+    margin: 25px 0;
+  }
+
+  .content-date-leng-detail {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .content-title-detail {
+    font-size: 24px;
+    margin-bottom: 25px;
+  }
+
+  .content-genre-item-detail {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .content-desc-detail {
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .contnt-rating-detail {
+    font-size: 16px;
+  }
+
+  /* ------------ Login componets ------------ */
+  .box-login {
+    width: 40%;
+  }
+
+  .title-login {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* ---------- Header ----------- */
+  .box-content {
+    padding: 20px 150px;
+  }
+
+  .nav-title {
+    font-size: 30px;
+  }
+
+  .box-nav-item {
+    gap: 0 50px;
+  }
+
+  .box-setting {
+    width: 20%;
+    padding: 20px 0;
+  }
+
+  .box-setting-hidden {
+    display: none;
+  }
+
+  /* ---------- Banner Slider ----------- */
+  .poster-slider-title {
+    font-size: 22px;
+  }
+
+  .box-content-slider {
+    height: 350px;
+  }
+
+  .title-content-main {
+    font-size: 22px;
+  }
+
+  /* ---------- Card Content List ----------- */
+  .card-container {
+    margin: 20px 100px;
+  }
+
+  .box-card {
+    width: 200px;
+  }
+
+  .card-image {
+    height: 250px;
+  }
+
+  /* ---------- Detail Content ----------- */
+  .box-detail {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .box-layout-detail {
+    display: flex;
+    gap: 0 50px;
+  }
+
+  .box-image-detail {
+    height: 100%;
+    margin: 0;
+  }
+
+  .content-desc-detail {
+    line-height: 2rem;
+  }
+
+  .box-content-detail {
+    margin: 0;
+  }
+
+  /* ------------ Login componets ------------ */
+  .box-login {
+    width: 25%;
+  }
+
+  .title-login {
+    font-size: 32px;
+  }
+}
