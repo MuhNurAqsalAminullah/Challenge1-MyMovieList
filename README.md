@@ -18,5 +18,5 @@ Di direktori projek, anda dapat menjalankan:
 
 Saat melakukan menjalankan website ini sebelum masuk kehalaman beranda anda akan di arahakan ke halaman login terlebih dahulu oleh sebab itu untuk bisa login silahkan masukan email dan password yang telah di siapkan di bawah ini :
 
-Email : user@example.com
-Password : 12345678
+- Email : user@example.com
+- Password : 12345678
